@@ -23,40 +23,18 @@ using namespace std;
 #define pi                  (double)(acos(-1.0))
 
 void nadimnesar() {
-    ll n;
-    cin >> n;
-
-    string s;
-    cin >> s;
-
-    string b = s;
-    reverse(full(b));
-    if(s == b){
-        cout << "YES" << endl;
-        return;
-    }
-
-    ll l = 0;
-    ll r = n-1;
-
-    while(l < r){
-        if(s[l] != s[r]){
-            if(s[l] == 'B' and r-l+1 > 2) cout << "YES" << endl;
-            else cout << "No" << endl;
-
-            return;
-        }
-        l++;
-        r--;
-    }
     
 }
 
 int main() {
-
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
-    nadimnesar();
+    int t, cn = 0;
+    cin >> t;
+    while (t--){
+        // cout << "Case #" << ++cn << ": ";
+        nadimnesar();
+    }
 
     return 0;
 }
