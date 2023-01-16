@@ -1,0 +1,4 @@
+{
+	"shell_cmd": "g++ -std=c++14 \"$file_name\" -o \"$file_base_name\" &&  \"$file_base_name\"<input.txt>output.txt",
+	"selector": "source.c, source.cpp, source.c++"
+}

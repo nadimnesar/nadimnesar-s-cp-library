@@ -1,0 +1,112 @@
+▣ Area of any polygone if all coordinate given
+	• Area 
+
+	 1    |  x1 x2 x3 x4 x1  |
+	--- x |                  |
+	 2    |  y1 y2 y3 y4 y1  |
+
+	 = (1.0/2.0) * abs(( x1*y2 + x2*y3 + x3*y4 + x4*y1) -
+        (x2*y1 + x3*y2 + x4*y3 + x1*y4))
+
+
+▣ Rectangle
+
+	• Properties - The opposite sides are parallel and equal to each other.
+				 - Each interior angle is equal to 90 degrees.
+				 - The sum of all the interior angles is equal to 360°.
+				 - The diagonals bisect each other.
+				 - Both the diagonals have the same length.
+
+	• Area 		= l * b
+	• Perimeter = 2 * (l + b)
+	• Diagonal 	= sqrt((l*l) + (b*b))
+
+
+▣ Square
+
+	• Properties - The lengths of all its four sides are equal.
+				 - The measurements of all its four angles are equal.
+				 - The two diagonals bisect each other at right angles, that is, 90°.
+				 - The opposite sides of a square are both parallel and equal in length.
+				 - The lengths of diagonals of a square are equal.
+
+	• Area 		= pow(length of any side, 2)
+	• Perimeter = 4 * length of any side
+	• Diagonal 	= length of any side * sqrt(2)
+
+
+▣ Rhombus
+
+	• Properties - All sides of the rhombus are equal.
+				 - The opposite sides of a rhombus are parallel.
+				 - Opposite angles of a rhombus are equal.
+				 - The opposite sides of a square are both parallel and equal in length.
+				 - In a rhombus, diagonals bisect each other at right angles.
+				 - Diagonals bisect the angles of a rhombus.
+				 - The sum of two adjacent angles is equal to 180°.
+
+	• Area 		= length of any side * hight
+				= (diagonal_1 * diagonal_2) / 2
+				= pow(length of any side, 2) * sin(measure of any interior angle)
+	• Perimeter = 4 * length of any side
+
+
+
+▣ Parallelogram
+
+	• Properties - The opposite sides are parallel and congruent.
+				 - The opposite angles are congruent.
+				 - The consecutive angles are supplementary.
+				 - If any one of the angles is a right angle, then all the other angles will be at right angle.
+				 - The two diagonals bisect each other.
+				 - Each diagonal bisects the parallelogram into two congruent triangles.
+				 - The Sum of square of all the sides of parallelogram is equal to the sum of square of its diagonals.
+
+	• Area 		= base * hight
+				= side * base * sin(any angle between the sides)
+				= ((diagonal_1 * diagonal_2) / 2) * sin(any angle between at the intersection point of the diagonals)
+	• Perimeter = 2 * (side + base)
+
+
+
+▣ Triangle
+
+	• Properties - The sum of all the angles of a triangle (of all types) is equal to 180°.
+				 - The sum of the length of the two sides of a triangle is greater than the length of the third side.
+				 - In the same way, the difference between the two sides of a triangle is less than the length of the third side.
+				 - If any one of the angles is a right angle, then all the other angles will be at right angle.
+				 - The side opposite the greater angle is the longest side of all the three sides of a triangle.
+				 - The exterior angle of a triangle is always equal to the sum of the interior opposite angles.
+				 - Two triangles are said to be similar if their corresponding angles of both triangles are congruent and the lengths of their sides are proportional.
+
+	• Area 				= (base * hight) / 2
+						= sqrt(s * (s – a) * (s – b) * (s – c))
+	• Perimeter 		= a + b + c
+	• Semi-perimeter, s = (a + b + c) / 2
+
+▣ Degenerate Triangle
+
+	• Properties - The area of a degenerate triangle is equal to zero.
+
+▣ Circle
+
+	• Properties - The circles are said to be congruent if they have equal radii.
+				 - The diameter of a circle is the longest chord of a circle.
+				 - Equal chords of a circle subtend equal angles at the centre.
+				 - The radius drawn perpendicular to the chord bisects the chord.
+				 - Circles having different radius are similar.
+
+	• Area 			= pi * r * r
+	• Diameter 		= 2 * r
+	• Circumference = 2 * pi * r
+
+
+▣ Trapezoid
+▣ Pentagon
+▣ Hexagon
+▣ Octagon
+▣ Cube
+▣ Cylinder
+▣ Cone
+▣ Sphere
+▣ Pyramid
