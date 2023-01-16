@@ -15,7 +15,6 @@ using namespace std;
 #define iremove(x,y)        x.erase(x.begin()+y)
 #define memset(x, y)        memset(x,y,sizeof(x))
 #define dot(x)              fixed<<setprecision(x)
-#define remove(x,y)         x.erase(remove(x.begin(),x.end(),y),x.end())
 
 #define gcd(x, y)           (ll)(__gcd(x, y))
 #define lcm(x, y)           (ll)((x/gcd(x,y))*y)
