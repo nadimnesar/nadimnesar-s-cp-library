@@ -16,25 +16,33 @@ using namespace std;
 #define lcm(x, y)           (ll)((x/gcd(x,y))*y)
 #define log(b, x)           (double)(log(x)/log(b))
 
-#define base                (ll)(10)
-#define maxx                (ll)(3e4+7)
-#define mod                 (ll)(1e9+7)
-#define eps                 (double)(1e-7)
-#define pi                  (double)(acos(-1.0))
+const int base = 10;
+const int mod = 1e9+7;
+const int maxx = 3e4+7;
+const double eps = 1e-7;
+const double pi = acos(-1.0);
 
-void nadimnesar() {
+void panacea() {
     
 }
 
 int main() {
+
+// #ifndef ONLINE_JUDGE
+//     freopen("input.txt", "r", stdin);
+//     freopen("output.txt", "w", stdout);
+// #endif
+
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
-    int t, cn = 0;
+    // int cn = 0;
+    int t;
     cin >> t;
     while (t--){
         // cout << "Case #" << ++cn << ": ";
-        nadimnesar();
+        panacea();
     }
+    // panacea();
 
     return 0;
 }

@@ -65,7 +65,7 @@ int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     Lg[1] = 0;
-    for(int i = 2; i < maxx; i++) Lg[i] = Lg[i/2] + 1;
+    for(int i = 2; i < maxx; i++) Lg[i] = Lg[i >> 1] + 1;
 
     solve();
     
