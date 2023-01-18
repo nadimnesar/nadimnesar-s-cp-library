@@ -1,4 +1,3 @@
-// C++ program to demonstrate various functionality of bitset
 #include <bits/stdc++.h>
 using namespace std;
 

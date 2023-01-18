@@ -1,5 +1,3 @@
-/* Priyansh Agarwal*/
-
 #include<bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>
@@ -9,22 +7,19 @@ using namespace __gnu_pbds;
 // for multiset use: less_equal
 // for set use: less
 
-typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> pbds; // find_by_order, order_of_key
+typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> pbds;
 
 int main() {
-	pbds A; // declaration
+	pbds A;
 
-	// Inserting elements - 1st query
 	A.insert(1);
 	A.insert(10);
 	A.insert(2);
 	A.insert(7);
-	A.insert(2);  // ordered set only contains unique values
+	A.insert(2); 
 
-	// A contains
 	cout << "A = ";
-	for (auto i : A)
-		cout << i << " ";
+	for (auto i : A) cout << i << " ";
 	cout << endl;
 	cout << endl;
 
@@ -57,8 +52,6 @@ int main() {
 
 	// A contains
 	cout << "A = ";
-	for (auto i : A)
-		cout << i << " ";
+	for (auto i : A) cout << i << " ";
 	cout << endl;
-
 }

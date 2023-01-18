@@ -22,7 +22,7 @@ const int maxx = 3e4+7;
 const double eps = 1e-7;
 const double pi = acos(-1.0);
 
-void panacea() {
+void solve() {
     
 }
 
@@ -40,9 +40,9 @@ int main() {
     cin >> t;
     while (t--){
         // cout << "Case #" << ++cn << ": ";
-        panacea();
+        solve();
     }
-    // panacea();
+    // solve();
 
     return 0;
 }

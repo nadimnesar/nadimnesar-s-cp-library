@@ -8,7 +8,7 @@ int main() {
     stack.push(24);
     stack.push(25);
     
-        stack.pop();
+    stack.pop();
     stack.pop();
 
     while (!stack.empty()) {
