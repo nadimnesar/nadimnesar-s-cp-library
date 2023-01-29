@@ -1,6 +1,6 @@
-int binarytodecimal(long long unsigned int binary)
+ll binarytodecimal(ll binary)
 {
-    i = 0, decimal = 0;
+    ll i = 0, decimal = 0;
     while(binary != 0)
     {
         decimal = decimal + pow(2, i)*(binary%10);
