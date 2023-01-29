@@ -4,6 +4,8 @@ using namespace std;
 #define ll                  long long
 #define llu                 unsigned long long
 
+#define first               ff
+#define second              ss
 #define endl                '\n'
 #define in                  insert
 #define pb                  push_back
@@ -27,12 +29,6 @@ void solve() {
 }
 
 int main() {
-
-// #ifndef ONLINE_JUDGE
-//     freopen("input.txt", "r", stdin);
-//     freopen("output.txt", "w", stdout);
-// #endif
-
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
     // int cn = 0;
@@ -42,7 +38,6 @@ int main() {
         // cout << "Case #" << ++cn << ": ";
         solve();
     }
-    // solve();
 
     return 0;
 }
