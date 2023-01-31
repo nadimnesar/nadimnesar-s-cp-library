@@ -55,7 +55,6 @@ pair < ll, ll > get_hashValue(string &str) {
   for (int i = 0; str[i]; i++) {
     res.first *= base[0]; res.first %= mod[0];
     res.first += (str[i] - 'a' + 1);
-
     res.second *= base[1]; res.second %= mod[1];
     res.second += (str[i] - 'a' + 1);
   }
