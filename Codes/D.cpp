@@ -2,8 +2,6 @@
 using namespace std;
 
 #define ll                  long long
-#define llu                 unsigned long long
-
 #define endl                '\n'
 #define in                  insert
 #define pb                  push_back
