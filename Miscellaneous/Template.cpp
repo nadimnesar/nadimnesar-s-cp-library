@@ -4,8 +4,6 @@ using namespace std;
 #define ll                  long long
 #define llu                 unsigned long long
 
-#define first               ff
-#define second              ss
 #define endl                '\n'
 #define in                  insert
 #define pb                  push_back
@@ -18,7 +16,6 @@ using namespace std;
 #define lcm(x, y)           (ll)((x/gcd(x,y))*y)
 #define log(b, x)           (double)(log(x)/log(b))
 
-const int base = 10;
 const int mod = 1e9+7;
 const int maxx = 3e4+7;
 const double eps = 1e-7;
