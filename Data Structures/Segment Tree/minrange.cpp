@@ -1,51 +1,77 @@
-#include <stdio.h>
+#include <bits/stdc++.h>
+using namespace std;
 
-#define MAX              (int)(1e5+7)
+#define ll                  long long
+#define endl                '\n'
+#define in                  insert
+#define pb                  push_back
 
-int n, q, s, e;
-int arr[MAX];
-int segTree[(MAX << 1)];
+#define full(x)             x.begin(),x.end()
+#define memset(x, y)        memset(x,y,sizeof(x))
+#define dot(x)              fixed<<setprecision(x)
 
-void build_segTree(int index, int left, int right){
-    if(left == right){
-        segTree[index] = arr[left];
+#define gcd(x, y)           (ll)(__gcd(x, y))
+#define lcm(x, y)           (ll)((x/gcd(x,y))*y)
+#define log(b, x)           (double)(log(x)/log(b))
+
+const ll mod = 1e9 + 7;
+const ll maxx = 3e4 + 7;
+const double eps = 1e-7;
+const ll inf = LLONG_MAX;
+const double pi = acos(-1.0);
+
+ll arr[maxx];
+ll segTree[4 * maxx];
+
+void build_segTree(ll idx, ll left, ll right) {
+    if (left == right) {
+        segTree[idx] = arr[left];
         return;
     }
-    int mid = (left+right) >> 1;
-    build_segTree((index << 1), left, mid);
-    build_segTree((index << 1)+1, mid+1, right);
 
-    segTree[index] = (segTree[(index << 1)] > segTree[(index << 1)+1]) ? segTree[(index << 1)+1]: segTree[(index << 1)];
+    ll mid = (left + right) >> 1;
+    build_segTree((idx << 1), left, mid);
+    build_segTree((idx << 1) + 1, mid + 1, right);
+
+    segTree[idx] = min(segTree[(idx << 1)], segTree[(idx << 1) + 1]);
 }
 
-int range_quary(int index, int left, int right){
-    if(right < s or left > e) return MAX;
-    if(left >= s and right <= e) return segTree[index];
+ll range_quary(ll idx, ll left, ll right, ll s, ll e) {
+    if (right < s or left > e) return inf;
+    if (left >= s and right <= e) return segTree[idx];
 
-    int mid = (left+right) >> 1;
-    int left_min = range_quary((index << 1), left, mid);
-    int right_min = range_quary((index << 1)+1, mid+1, right);
-
-    return (left_min > right_min) ? right_min: left_min;
+    ll mid = (left + right) >> 1;
+    return min(range_quary((idx << 1), left, mid, s, e),
+               range_quary((idx << 1) + 1, mid + 1, right, s, e));
 }
 
-void solve(){
-    scanf("%d %d", &n, &q);
-    for(int i = 1; i <= n; i++) scanf("%d", &arr[i]);
+void single_update(ll idx, ll left, ll right, ll ith, ll v) {
+    if (right < ith or left > ith) return;
+    if (left == ith and right == ith) {
+        segTree[idx] = v;
+        return;
+    }
+
+    ll mid = (left + right) >> 1;
+    single_update((idx << 1), left, mid, ith, v);
+    single_update((idx << 1) + 1, mid + 1, right, ith, v);
+
+    segTree[idx] = min(segTree[(idx << 1)], segTree[(idx << 1) + 1]);
+}
+
+void solve() {
+    ll n, q, s, e;
+    cin >> n >> q;
+    for (ll i = 1; i <= n; i++) cin >> arr[i];
     build_segTree(1, 1, n);
-    while(q--){
-        scanf("%d %d", &s, &e);
-        printf("%d\n", range_quary(1, 1, n));
+    while (q--) {
+        cin >> s >> e;
+        cout << range_quary(1, 1, n, s, e) << endl;
     }
 }
 
-int main(){
-
-    int t; scanf("%d", &t);
-    int cn = 0;
-    while(t--){
-        printf("Case %d:\n", ++cn);
-        solve();
-    }
- 
+int main() {
+    ios::sync_with_stdio(false); cin.tie(nullptr);
+    ll t; cin >> t;
+    while (t--) solve();
 }
