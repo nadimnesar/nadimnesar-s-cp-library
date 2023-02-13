@@ -33,7 +33,7 @@ void init() {
     }
 }
 
-void build_hashTable(string &str) { // 1 based inx
+void build_hashTable(string &str) { // 1 based idx
     hashTable[0][1] = hashTable[1][1] = (str[0] - 'a' + 1);
     for (int i = 1; str[i]; i++) {
         hashTable[0][i + 1] = ((hashTable[0][i] * base[0]) + (str[i] - 'a' + 1)) % mod[0];
@@ -41,7 +41,7 @@ void build_hashTable(string &str) { // 1 based inx
     }
 }
 
-pair < ll, ll > get_subHash(int left, int right) { // 1 based inx
+pair < ll, ll > get_subHash(int left, int right) { // 1 based idx
     pair < ll, ll > sub;
     sub.first = (hashTable[0][right] - (hashTable[0][left - 1] * basePow[0][right - left + 1])) % mod[0];
     sub.second = (hashTable[1][right] - (hashTable[1][left - 1] * basePow[1][right - left + 1])) % mod[1];
