@@ -39,21 +39,21 @@ void build_front_hashTable(string &str) { // 1 based idx
     }
 }
 
-pair < ll, ll > get_subHash(ll left, ll right) { // 1 based idx
-    pair < ll, ll > sub;
-    sub.first = (front_hashTable[0][right] - (front_hashTable[0][left - 1] * basePow[0][right - left + 1])) % mod[0];
-    sub.second = (front_hashTable[1][right] - (front_hashTable[1][left - 1] * basePow[1][right - left + 1])) % mod[1];
-    if (sub.first < 0) sub.first += mod[0];
-    if (sub.second < 0) sub.second += mod[1];
-    return sub;
-}
-
 void build_back_hashTable(string &str) { // 1 based idx
     back_hashTable[0][n] = back_hashTable[1][n] = (str[n - 1] - 'a' + 1);
     for (ll i = n - 2; i >= 0; i--) {
         back_hashTable[0][i + 1] = ((back_hashTable[0][i + 2] * base[0]) + (str[i] - 'a' + 1)) % mod[0];
         back_hashTable[1][i + 1] = ((back_hashTable[1][i + 2] * base[1]) + (str[i] - 'a' + 1)) % mod[1];
     }
+}
+
+pair < ll, ll > get_front_subHash(ll left, ll right) { // 1 based idx
+    pair < ll, ll > sub;
+    sub.first = (front_hashTable[0][right] - (front_hashTable[0][left - 1] * basePow[0][right - left + 1])) % mod[0];
+    sub.second = (front_hashTable[1][right] - (front_hashTable[1][left - 1] * basePow[1][right - left + 1])) % mod[1];
+    if (sub.first < 0) sub.first += mod[0];
+    if (sub.second < 0) sub.second += mod[1];
+    return sub;
 }
 
 pair < ll, ll > get_backward_subHash(ll left, ll right) { // 1 based idx
@@ -65,9 +65,20 @@ pair < ll, ll > get_backward_subHash(ll left, ll right) { // 1 based idx
     return sub;
 }
 
+pair < ll, ll > get_hashValue(string &str) {
+  pair < ll, ll > res; res.first = 0; res.second = 0;
+  for (int i = 0; str[i]; i++) {
+    res.first *= base[0]; res.first %= mod[0];
+    res.first += (str[i] - 'a' + 1);
+    res.second *= base[1]; res.second %= mod[1];
+    res.second += (str[i] - 'a' + 1);
+  }
+  return res;
+}
+
 bool check(ll siz) {
     for (ll i = 1; i <= n - siz + 1; i++) {
-        if (get_subHash(i, i+siz-1) == get_backward_subHash(i, i+siz-1)) {
+        if (get_front_subHash(i, i+siz-1) == get_backward_subHash(i, i+siz-1)) {
             return true;
         }
     }
