@@ -58,7 +58,7 @@ void solve() {
     gp_hash_table < ll, ll, customHash> table;
     table[0] = 1;
     for(ll i = 1; i <= n; i++){
-        if(pre[i] >= k) cnt_subarry += table[pre[i]-k];
+        cnt_subarry += table[pre[i]-k];
         table[pre[i]]++;
     }
     cout << cnt_subarry << endl;
