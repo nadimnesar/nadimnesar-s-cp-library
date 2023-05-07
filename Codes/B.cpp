@@ -19,6 +19,9 @@ const ll inf = LLONG_MAX;
 const double eps = 1e-7;
 const double pi = acos(-1.0);
 
+ll dx[] = { 0, 0, 1, -1 };
+ll dy[] = { 1, -1, 0, 0 };
+
 void solve() {
   
 }
