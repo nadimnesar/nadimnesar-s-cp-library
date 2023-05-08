@@ -23,7 +23,7 @@ ll dx[] = { 0, 0, 1, -1 };
 ll dy[] = { 1, -1, 0, 0 };
 
 void solve() {
-
+  
 }
 
 int main() {
