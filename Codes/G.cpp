@@ -7,7 +7,6 @@ using namespace std;
 #define pb              push_back
 
 #define full(x)         x.begin(),x.end()
-#define memset(x, y)    memset(x,y,sizeof(x))
 #define dot(x)          fixed<<setprecision(x)
 
 #define gcd(x, y)       (ll)(__gcd(x, y))
@@ -18,9 +17,6 @@ const ll mod = 1e9 + 7;
 const ll maxx = 1e6 + 7;
 const double eps = 1e-7;
 const double pi = acos(-1.0);
-
-ll dx[] = { 0, 0, 1, -1 };
-ll dy[] = { 1, -1, 0, 0 };
 
 void solve() {
 

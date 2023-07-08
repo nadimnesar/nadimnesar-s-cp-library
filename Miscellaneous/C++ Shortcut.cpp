@@ -15,7 +15,7 @@
 #define dot(x)              fixed<<setprecision(x)
 #define rremove(x, y)       x.erase(remove(x.begin(),x.end(),y),x.end())
 #define alluniq(x, y)       x.resize(distance(x.begin(),unique(x.begin(),x.begin()+y)))
-#define fastIO              ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr)
+#define fastIO              ios_base::sync_with_stdio(false);cin.tie(nullptr)
 
 #define EPS                 (1e-7)
 #define MAX                 (int)(1e5+7)
@@ -57,3 +57,6 @@ untype void vout(vector < T > &v) { for (llu i = 0; i < v.size(); i++) {
 untype llu LCM(T a, T b) {a = abs(a); b = abs(b); return (a / GCD(a, b)) * b;}
 untype llu binpow(T n, T p){ if(p == 0) return 1; llu res = binpow(n, p/2);
 if(p%2) return res*res*n; else return res*res; }
+
+ll dx[] = { 0, 0, 1, -1 };
+ll dy[] = { 1, -1, 0, 0 };
