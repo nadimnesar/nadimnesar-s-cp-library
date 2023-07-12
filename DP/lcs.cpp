@@ -18,41 +18,47 @@ const ll maxx = 1e6 + 7;
 const double eps = 1e-7;
 const double pi = acos(-1.0);
 
-string a, b, c;
-
-ll dp[50][50][50];
-ll lcs(ll i, ll j, ll k) {
-  if (i < 0) return 0;
-  if (j < 0) return 0;
-  if (k < 0) return 0;
-
-  if (dp[i][j][k] != -1) return dp[i][j][k];
-  if (a[i] == b[j] and a[i] == c[k]) return dp[i][j][k] = 1 + lcs(i - 1, j - 1, k - 1);
-  return dp[i][j][k] = max({lcs(i - 1, j, k), lcs(i, j - 1, k), lcs(i, j, k - 1)});
-}
+ll dp[3001][3001];
 
 void solve() {
-  cin >> a >> b >> c;
-  cout << lcs(a.size() - 1, b.size() - 1, c.size() - 1) << endl;
+  string a, b;
+  cin >> a >> b;
+
+  for (ll i = 0; i <= a.size(); i++) {
+    for (ll j = 0; j <= b.size(); j++) {
+      if (i  == 0 or j == 0) dp[i][j] = 0;
+      else if (a[i - 1] == b[j - 1]) dp[i][j] = dp[i - 1][j - 1] + 1;
+      else dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+    }
+  }
+
+ 
+  ll i = a.size();
+  ll j = b.size();
+
+  string lcs;
+  while(i > 0 and j > 0){
+
+    if(a[i-1] == b[j-1]){
+      lcs += a[i-1];
+      i--;
+      j--;
+      continue;
+    }
+    
+    if(dp[i-1][j] > dp[i][j-1]) i--;
+    else j--;
+  }
+
+  reverse(full(lcs));
+
+  cout << lcs << endl;
 }
 
 int main() {
   ios::sync_with_stdio(false); cin.tie(nullptr);
 
-  ll t, cn = 0;
-  cin >> t;
-  while (t--) {
-    cout << "Case " << ++cn << ": ";
-    for (ll i = 0; i < 50; i++) {
-      for (ll j = 0; j < 50; j++) {
-        for (ll k = 0; k < 50; k++) {
-          dp[i][j][k] = -1;
-        }
-      }
-    }
-    
-    solve();
-  }
+  solve();
 
   return 0;
 }
