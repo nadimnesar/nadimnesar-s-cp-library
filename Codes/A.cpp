@@ -19,7 +19,7 @@ const double eps = 1e-7;
 const double pi = acos(-1.0);
 
 void solve() {
-  
+  cout << "nadimnesar" << endl;
 }
 
 int main() {
