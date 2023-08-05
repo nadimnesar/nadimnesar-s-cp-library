@@ -19,15 +19,17 @@ const double eps = 1e-7;
 const double pi = acos(-1.0);
 
 void solve() {
-  
+
 }
 
 int main() {
-  ios::sync_with_stdio(false); cin.tie(nullptr);
+	ios::sync_with_stdio(false); cin.tie(nullptr);
 
-  ll t;
-  cin >> t;
-  while (t--) solve();
+	ll t = 1, cn = 0;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
 
-  return 0;
+	return 0;
 }
