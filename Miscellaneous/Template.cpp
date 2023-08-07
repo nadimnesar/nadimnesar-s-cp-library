@@ -22,12 +22,16 @@ void solve() {
 
 }
 
-int main() {
-  ios::sync_with_stdio(false); cin.tie(nullptr);
+int32_t main() {
+	ios::sync_with_stdio(false); cin.tie(nullptr);
 
-  ll t;
-  cin >> t;
-  while (t--) solve();
+	// ll cn = 0;
+	ll t = 1;
+	cin >> t;
+	while (t--) {
+		// cout << "Case " << ++cn << ": ";
+		solve();
+	}
 
-  return 0;
+	return 0;
 }
