@@ -1,37 +1,52 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
+typedef long long ll;
+typedef unsigned long long ull;
+#define nn "\n"
+#define mod 1000000007
 using namespace std;
 
-#define ll              long long int
-#define endl            '\n'
-#define in              insert
-#define pb              push_back
+int n,k;
+vector<int>vec(101);
+int dp[100001];
 
-#define full(x)         x.begin(),x.end()
-#define dot(x)          fixed<<setprecision(x)
+bool rec(int stones){
+    // returns a player can win or not if he has to play first
+    // with these stones
 
-#define gcd(x, y)       (ll)(__gcd(x, y))
-#define lcm(x, y)       (ll)((x/gcd(x,y))*y)
-#define log(b, x)       (double)(log(x)/log(b))
+    if(stones==0) return 0;
+    if(stones<0) return 1;
+    if(dp[stones]!=-1) return dp[stones];
 
-const ll mod = 1e9 + 7;
-const ll maxx = 1e6 + 7;
-const double eps = 1e-7;
-const double pi = acos(-1.0);
+    int ans=1;
 
-void solve() {
+    for(int i=0;i<n;i++){
+        ans &= rec(stones-vec[i]);
+    }
+    ans^=1;
 
+    return dp[stones] = ans;
 }
 
-int32_t main() {
-	ios::sync_with_stdio(false); cin.tie(nullptr);
+// check int overflow
+void solve(){
+    cin>>n>>k;
+    for(int i=0;i<n;i++)cin>>vec[i];
 
-	// ll cn = 0;
-	ll t = 1;
-	cin >> t;
-	while (t--) {
-		// cout << "Case " << ++cn << ": ";
-		solve();
-	}
+    memset(dp,-1,sizeof dp);
 
-	return 0;
+    (rec(k))?cout<<"First"<<nn:cout<<"Second"<<nn;
+}   
+ 
+int main()
+{
+ 
+    // freopen("reduce.in", "r", stdin);
+    // freopen("reduce.out", "w", stdout);
+    int tc=1;
+    //cin>>tc;
+    //scanf("%d",&tc);  
+    while(tc--){
+        solve();
+    }
+    return 0;
 }
