@@ -9,6 +9,7 @@ using namespace std;
 #define pb					push_back
 
 #define full(x)			x.begin(),x.end()
+#define rfull(x)		x.rbegin(),x.rend()
 #define dot(x)			fixed<<setprecision(x)
 
 #define gcd(x, y)		(ll)(__gcd(x, y))
