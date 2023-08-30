@@ -60,3 +60,6 @@ if(p%2) return res*res*n; else return res*res; }
 
 ll dx[] = { 0, 0, 1, -1 };
 ll dy[] = { 1, -1, 0, 0 };
+
+ll knightx[8] = { +2, +2, -2, -2, +1, -1, -1, +1 };
+ll knighty[8] = { -1, +1, +1, -1, +2, +2, -2, -2 };
