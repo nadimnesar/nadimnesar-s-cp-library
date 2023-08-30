@@ -63,3 +63,11 @@ ll dy[] = { 1, -1, 0, 0 };
 
 ll knightx[8] = { +2, +2, -2, -2, +1, -1, -1, +1 };
 ll knighty[8] = { -1, +1, +1, -1, +2, +2, -2, -2 };
+
+bool valid(ll r, ll c){
+	if(r < 1) return false;
+	if(r > 8) return false;
+	if(c < 1) return false;
+	if(c > 8) return false;
+	return true;
+}
