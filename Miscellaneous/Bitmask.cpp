@@ -1,4 +1,5 @@
 // indexing from right side and started at 0
+// take 2^n for masking n positions
 
 ll turnOnK(ll mask, ll k) {
 	return (mask | (1 << k));
