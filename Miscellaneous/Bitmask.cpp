@@ -1,7 +1,6 @@
 // indexing from right side and started at 0
 
 ll turnOnK(ll mask, ll k) {
-	if (k <= 0) return mask;
 	return (mask | (1 << k));
 }
 
