@@ -72,7 +72,12 @@ bool valid(ll r, ll c){
 	return true;
 }
 
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+ #ifdef ONLINE_JUDGE
+        clock_t tStart = clock();
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+#endif
+
+#ifdef ONLINE_JUDGE
+        fprintf(stderr, "\n>> Runtime: %.10fs\n", (double) (clock() - tStart) / CLOCKS_PER_SEC);
 #endif
