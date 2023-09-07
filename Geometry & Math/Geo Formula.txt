@@ -99,14 +99,3 @@
 	• Area 			= pi * r * r
 	• Diameter 		= 2 * r
 	• Circumference = 2 * pi * r
-
-
-▣ Trapezoid
-▣ Pentagon
-▣ Hexagon
-▣ Octagon
-▣ Cube
-▣ Cylinder
-▣ Cone
-▣ Sphere
-▣ Pyramid
