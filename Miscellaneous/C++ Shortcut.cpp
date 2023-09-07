@@ -71,3 +71,8 @@ bool valid(ll r, ll c){
 	if(c > 8) return false;
 	return true;
 }
+
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
