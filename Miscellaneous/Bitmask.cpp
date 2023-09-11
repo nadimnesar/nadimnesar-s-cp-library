@@ -17,3 +17,8 @@ bool isKthBitSet(ll mask, ll k) {
 ll get_bit_count(ll n){
     return __builtin_popcountll(n);
 }
+
+▣ Bitwise
+
+	• 2^n = (1 << n)
+	• n / 2 = (n >> 1)
