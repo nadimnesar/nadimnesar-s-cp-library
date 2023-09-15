@@ -13,3 +13,12 @@
 
 	• non-empty subarray = (n*(n+1))/2
 	• non-empty subsequence = (2^n) - 1
+
+▣ Expected Value
+	Number of Day = N
+	ith day outcome = Ei (1 <= i <= N)
+	Probability to gain outpcome of ith day = Pi (1 <= i <= N)
+
+	Exected Value = Sum of ( Ei x Pi )
+
+
