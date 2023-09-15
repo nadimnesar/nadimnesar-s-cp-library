@@ -18,7 +18,4 @@
 	Number of Day = N
 	ith day outcome = Ei (1 <= i <= N)
 	Probability to gain outpcome of ith day = Pi (1 <= i <= N)
-
 	Exected Value = Sum of ( Ei x Pi )
-
-
