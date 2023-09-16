@@ -1,1 +1,17 @@
 2 -> last digit is even
+
+3 -> a number is completely divisible by 3 if the sum of its digits is divisible by 3.
+
+4 -> if the number has two zeros in the end or the last two digits form a number that is exactly divided by 4, then the given number is also divisible by 4.
+
+5 -> If the last number is either 0 or 5, the entire number is divisible by 5.
+
+6 -> Numbers which are divisible by both 2 and 3 are divisible by 6.
+
+7 -> If the remainder is zero or a multiple of 7, then the number is divisible by 7.
+
+8 -> If the last three digits of a number are divisible by 8, then the number is completely divisible by 8. 
+
+9 -> if the sum of digits of the number is divisible by 9, then the number itself is divisible by 9.
+
+
