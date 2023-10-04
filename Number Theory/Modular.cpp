@@ -1,13 +1,12 @@
 ll big_mod(ll B, ll P, ll M) {
     if (P == 0) return 1;
     if (P & 1) {
-        ll p1 = B % M;
-        ll p2 = (big_mod(B, P / 2, M)) % M;
-        p1 = (p1 * p2) % M;
+        ll p1 = big_mod(B, P / 2, M);
+        ll p2 = (p1 * B) % M;
         return (p1 * p2) % M;
     }
     else {
-        ll p1 = (big_mod(B, P / 2, M)) % M;
+        ll p1 = big_mod(B, P / 2, M);
         return (p1 * p1) % M;
     }
 }
