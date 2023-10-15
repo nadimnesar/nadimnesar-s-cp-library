@@ -20,14 +20,18 @@ const ll maxx = 1e6 + 7;
 const double eps = 1e-7;
 const double pi = acos(-1.0);
 
+struct Hashing {
+
+};
+
 void solve() {
-	
+	cout << "Hi" << endl;
 }
 
 int32_t main() {
 	ios::sync_with_stdio(false); cin.tie(nullptr);
 
 	solve();
-	
+
 	return 0;
 }
