@@ -70,6 +70,20 @@ struct Trie {
 		}
 		return ret;
 	}
+
+	void clear(){
+		clear(root);
+	}
+
+	void clear(node* cur){
+		for(ll i = 0; i < 26; i++){
+			if(cur -> next[i] != nullptr){
+				clear(cur -> next[i]);
+				cur -> next[i] = nullptr;
+			}
+		}
+		delete(cur);
+	}
 };
 
 void solve() {
@@ -96,6 +110,8 @@ void solve() {
 	}
 
 	cout << (flag ? "YES" : "NO") << endl;
+
+	trie.clear();
 }
 
 int32_t main() {
