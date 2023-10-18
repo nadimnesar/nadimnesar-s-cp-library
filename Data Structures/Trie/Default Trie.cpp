@@ -71,6 +71,16 @@ struct Trie {
 		return ret;
 	}
 
+	void dfs(){
+		return dfs(root);
+	}
+
+	void dfs(node* cur){
+		for(ll i = 0; i < 26; i++){
+			if(cur -> next[i] != nullptr) dfs(cur -> next[i]);
+		}
+	}
+
 	void clear(){
 		clear(root);
 	}
