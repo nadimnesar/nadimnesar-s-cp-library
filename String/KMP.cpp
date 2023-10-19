@@ -22,7 +22,7 @@ const double pi = acos(-1.0);
 
 vector < ll > build_lps(string &p) {
 	ll sz = p.size();
-	vector <ll> lps(sz, 0);
+	vector < ll > lps(sz, 0);
 	ll j = 0;
 	lps[0] = 0;
 	for (ll i = 1; i < sz; i++) {
@@ -37,7 +37,7 @@ vector < ll > build_lps(string &p) {
 }
 
 vector < ll > ans;
-void kmp(vector<ll> &lps, string &s, string &p) {
+void kmp(vector < ll > &lps, string &s, string &p) {
 	ll psz = p.size();
 	ll ssz = s.size();
 	ll j = 0;
