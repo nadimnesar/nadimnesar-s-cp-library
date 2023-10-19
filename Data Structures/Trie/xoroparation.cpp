@@ -25,6 +25,7 @@ struct Trie {
 
 	struct node {
 		node* next[2];
+		int count[2] = { 0 };
 
 		bool iscontain(bool v) {
 			return (next[v] != NULL);
@@ -45,8 +46,24 @@ struct Trie {
 			bool b = val >> i & 1;
 			if (!(cur -> iscontain(b)))
 				cur -> putnext(b, new node());
+			cur -> count[b]++;
 			cur = cur -> getnext(b);
 		}
+	}
+
+	int query(int x, int k) { // number of values that v ^ x < k
+		node* cur = root;
+		int ans = 0;
+		for (int i = bit - 1; i >= 0; i--) {
+			if (cur == nullptr) break;
+			bool bx = x >> i & 1;
+			bool bk = k >> i & 1;
+			if (bk) {
+				if (cur -> iscontain(bx)) ans += cur -> count[bx];
+				cur = cur -> getnext(!bx);
+			} else cur = cur -> getnext(bx);
+		}
+		return ans;
 	}
 
 	ll get_max(ll val) {
@@ -101,7 +118,6 @@ void solve() {
 	for (ll i = 0; i < n; i++) {
 		ll tmp;
 		cin >> tmp;
-		x ^= tmp;
 		v.pb(x);
 	}
 
@@ -110,7 +126,7 @@ void solve() {
 
 	ll mx = 0;
 	ll mn = LLONG_MAX;
-	for(ll i = 0; i < n; i++){
+	for (ll i = 0; i < n; i++) {
 		mx = max(mx, trie.get_max(v[i]));
 		mn = min(mn, trie.get_min(v[i]));
 		trie.add(v[i]);
@@ -126,7 +142,7 @@ int32_t main() {
 
 	ll t, cn = 0;
 	cin >> t;
-	while (t--){
+	while (t--) {
 		cout << "Case " << ++cn << ": ";
 		solve();
 	}
