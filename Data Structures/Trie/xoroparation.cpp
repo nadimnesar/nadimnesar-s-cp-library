@@ -25,7 +25,7 @@ struct Trie {
 
 	struct node {
 		node* next[2];
-		int count[2] = { 0 };
+		ll count[2] = { 0 };
 
 		bool iscontain(bool v) {
 			return (next[v] != NULL);
@@ -51,9 +51,9 @@ struct Trie {
 		}
 	}
 
-	int query(int x, int k) { // number of values that v ^ x < k
+	ll query(ll x, ll k) { // number of values that v ^ x < k
 		node* cur = root;
-		int ans = 0;
+		ll ans = 0;
 		for (int i = bit - 1; i >= 0; i--) {
 			if (cur == nullptr) break;
 			bool bx = x >> i & 1;
