@@ -20,7 +20,7 @@ const ll maxx = 1e6 + 7;
 const double eps = 1e-7;
 const double pi = acos(-1.0);
 
-vector< ll > build_lps(string &p) {
+vector < ll > build_lps(string &p) {
 	ll sz = p.size();
 	vector <ll> lps(sz, 0);
 	ll j = 0;
