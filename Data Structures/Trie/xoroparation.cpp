@@ -21,7 +21,7 @@ const double eps = 1e-7;
 const double pi = acos(-1.0);
 
 struct Trie {
-	static const int bit = 32;
+	static const int bit = 31;
 
 	struct node {
 		node* next[2];
