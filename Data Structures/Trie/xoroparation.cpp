@@ -72,7 +72,7 @@ struct Trie {
 		for (int i = bit - 1; i >= 0; i--) {
 			bool b = val >> i & 1;
 			if (cur -> iscontain(!b)) {
-				mxv = mxv | (1 << i);
+				mxv = mxv | (1LL << i);
 				cur = cur -> getnext(!b);
 			}
 			else cur = cur -> getnext(b);
@@ -88,7 +88,7 @@ struct Trie {
 			if (cur -> iscontain(b)) cur = cur -> getnext(b);
 			else {
 				cur = cur -> getnext(!b);
-				mnv = mnv | (1 << i);
+				mnv = mnv | (1LL << i);
 			}
 		}
 		return mnv;
