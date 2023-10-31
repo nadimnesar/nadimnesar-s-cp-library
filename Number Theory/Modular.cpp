@@ -11,6 +11,15 @@ ll big_mod(ll B, ll P, ll M) {
     }
 }
 
+ll bigmod(ll b, ll p) {
+    ll x = 1;
+    while (p) {
+        if (p & 1)x = (x * b) % m;
+        b = (b * b) % m;
+        p >>= 1;
+    } return x;
+}
+
 ll inverse_mod(ll B, ll M) {
     return big_mod(B, M - 2, M);
 }
