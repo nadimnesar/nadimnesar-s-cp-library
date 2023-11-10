@@ -13,5 +13,3 @@
 8 -> If the last three digits of a number are divisible by 8, then the number is completely divisible by 8. 
 
 9 -> if the sum of digits of the number is divisible by 9, then the number itself is divisible by 9.
-
-
