@@ -25,8 +25,12 @@ bool checkPowerOf2(ll x){ //check either 2^y = x or not
 	return (x and !(x&(x-1)));
 }
 
-▣ Bitwise
+ll xmodwithpowerof2(ll x, ll mod){  //work if mod = 2^k 
+	return (x & (mod-1));
+}
 
+
+▣ Bitwise
 	• 2^n = (1 << n)
 	• n * 2 = (n << 1)
 	• n * 2^k = (n << k)
