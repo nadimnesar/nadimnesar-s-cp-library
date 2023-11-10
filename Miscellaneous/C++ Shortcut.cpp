@@ -1,9 +1,9 @@
 • remove kth index
-v.erase(v.begin() + k)
+	v.erase(v.begin() + k)
 • remove all value = k
-                       v.erase(remove(v.begin(), v.end(), k), v.end())
-                       • make all unique value
-                       sort(full(x)); x.resize(distance(x.begin(), unique(full(x))));
+	v.erase(remove(v.begin(), v.end(), k), v.end())
+• make all unique value
+    sort(full(x)); x.resize(distance(x.begin(), unique(full(x))));
 
 ll dx[] = { 0, 0, 1, -1 };
 ll dy[] = { 1, -1, 0, 0 };
