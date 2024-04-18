@@ -52,6 +52,6 @@ While most of the code in this library has been personally developed by me, ther
 This library is provided under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code for both personal and commercial purposes. However, I would appreciate it if you could include a reference to this repository if you decide to use any part of this library in your own projects.
 
 ## Contact
-If you have any questions, suggestions, or just want to connect, feel free to reach out to me via email at [nadimnesar.cse@gmail.com](mailto:nesar.ahmed@example.com) or through my [Codeforces profile](https://codeforces.com/profile/Nesar_Ahmed).
+If you have any questions, suggestions, or just want to connect, feel free to reach out to me via email at [nadimnesar.cse@gmail.com](mailto:nadimnesar.cse@gmail.com) or through my [Codeforces profile](https://codeforces.com/profile/nadimnesar).
 
 Happy coding! 🚀
