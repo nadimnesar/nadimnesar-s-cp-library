@@ -64,6 +64,17 @@ int main(){
 
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
+    // 2^x = N
+    // log10 2^x = log10 N
+    // x = log10 N / log10 2
+    // x = log2 N
+    // now,,,
+    // log2 N/2 = log2 N - log2 2
+    // log2 N/2 = log2 N - 1
+    // log2 N/2 + 1 = log2 N
+    // so,,,,
+    // x = log2 N/2 + 1
+
     Lg[1] = 0;
     for(int i = 2; i < maxx; i++) Lg[i] = Lg[i >> 1] + 1;
 
