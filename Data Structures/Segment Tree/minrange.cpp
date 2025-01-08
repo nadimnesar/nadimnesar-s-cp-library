@@ -22,6 +22,13 @@ const double pi = acos(-1.0);
 
 ll arr[maxx];
 ll segTree[4 * maxx];
+//why 4 * n ??
+//hight of completeBT = log2 N
+//number of node in completeBT = (2 ^ (h + 1 )) - 1
+// complete BT = 2 ^ (log2 N + 1)
+// 2 ^ log2 N <= 2n
+// for +1 multiply by 2
+// 4n - 1
 
 void build_segTree(ll idx, ll left, ll right) {
     if (left == right) {
