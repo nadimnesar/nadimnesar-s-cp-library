@@ -29,13 +29,13 @@ using namespace std;
 int n;
 int arr[maxx];
 int sTable[26][maxx];
-int Lg[maxx];
+int Lg[maxx]; //Lg[x] gives the largest power of 2 (as an exponent) that is less than or equal to x.
 
 void build_sTable(){
     for(int i = 0; i <= Lg[n]; i++){
         for(int j = 0; j+(1 << i) <= n; j++){
             if(i == 0) sTable[i][j] = arr[j];
-            else sTable[i][j] = min(sTable[i-1][j], sTable[i-1][j+(1 << (i-1))]);
+            else sTable[i][j] = min(sTable[i-1][j], sTable[i-1][j+(1 << (i-1))]); // i << (i-1) = 2 ^ (i-1)
         }
     }
 }
