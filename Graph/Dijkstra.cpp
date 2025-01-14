@@ -9,7 +9,7 @@ using namespace std;
 #define inf                 (ll)(1e12)
 #define pi                  pair < int, int >
 
-// Complexity: Edges * Log (Vartex)
+// Complexity: Edges * Log (Vartex + Edges)
 
 vector < pi > graph[maxx];
 priority_queue < pi, vector< pi >, greater < pi > > pq;
